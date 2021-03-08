@@ -17,10 +17,10 @@ function _first(id: string): Element {
     return document.querySelector(id);
 };
 
-function _create(element: string): ChildNode {
+function _create(element: string): HTMLElement {
     var div = document.createElement('div');
     div.innerHTML = element.trim();
-    return div.firstChild; 
+    return <HTMLElement> div.firstChild; 
 };
 
 HTMLElement.prototype._hide = function () {
